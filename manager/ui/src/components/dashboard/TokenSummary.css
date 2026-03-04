@@ -1,0 +1,34 @@
+.dash-tokens { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.dash-token-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+.dash-token-card:hover { border-color: var(--surface3); }
+.dash-token-label {
+  font-size: 11px; font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+}
+.dash-token-value {
+  font-size: 22px; font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+.dash-token-value.input { color: var(--cyan); }
+.dash-token-value.output { color: var(--green); }
+.dash-token-value.cache { color: var(--magenta); }
+@media (min-width: 768px) {
+  .dash-tokens { grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .dash-token-card { padding: 16px 18px; }
+  .dash-token-value { font-size: 26px; }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .dash-tokens { grid-template-columns: repeat(2, 1fr); }
+}

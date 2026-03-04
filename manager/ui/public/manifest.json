@@ -1,0 +1,14 @@
+{
+  "name": "Autosclaw Agent Manager",
+  "short_name": "Autosclaw",
+  "description": "Orchestrate autonomous Claude-powered agents",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#6366f1",
+  "orientation": "any",
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/icons/icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,200 @@
+.dash-table-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+}
+.dash-empty {
+  padding: 32px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+.dash-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.dash-table thead th {
+  text-align: left;
+  padding: 12px 12px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface2);
+  white-space: nowrap;
+}
+.dash-sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s;
+}
+.dash-sortable:hover {
+  color: var(--accent);
+}
+.dash-table tbody td {
+  padding: 12px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.dash-table tbody tr:last-child td { border-bottom: none; }
+.dash-agent-row { cursor: pointer; transition: background 0.15s ease; }
+.dash-agent-row:hover { background: var(--surface2); }
+.dash-agent-dot {
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  margin-right: 8px;
+  background: var(--text-dim);
+  vertical-align: middle;
+}
+.dash-agent-dot.running { background: var(--green); box-shadow: 0 0 4px rgba(74, 222, 128, 0.4); }
+.dash-agent-dot.starting { background: var(--yellow); }
+.dash-agent-dot.stopped { background: var(--red); opacity: 0.6; }
+.dash-agent-dot.stopping { background: var(--orange); }
+.dash-agent-dot.deleted { background: var(--text-dim); opacity: 0.4; }
+.dash-agent-dot.processing { background: var(--cyan); animation: pulse 1s ease-in-out infinite; }
+.dash-agent-dot.waiting { background: var(--magenta); animation: pulse 1.2s ease-in-out infinite; }
+.dash-status-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.dash-status-badge.running { background: rgba(74, 222, 128, 0.12); color: var(--green); }
+.dash-status-badge.starting { background: rgba(250, 204, 21, 0.12); color: var(--yellow); }
+.dash-status-badge.stopped { background: rgba(248, 113, 113, 0.12); color: var(--red); }
+.dash-status-badge.stopping { background: rgba(251, 146, 60, 0.12); color: var(--orange); }
+.dash-status-badge.deleted { background: rgba(148, 163, 184, 0.12); color: var(--text-dim); }
+.dash-status-badge.processing { background: rgba(34, 211, 238, 0.12); color: var(--cyan); }
+.dash-status-badge.waiting { background: rgba(192, 132, 252, 0.12); color: var(--magenta); }
+.dash-cost { font-variant-numeric: tabular-nums; color: var(--yellow); font-weight: 600; }
+.dash-agent-deleted { opacity: 0.55; }
+.dash-agent-deleted:hover { opacity: 0.75; }
+.dash-deleted-separator td {
+  padding: 6px 12px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface2);
+}
+.dash-total-cost {
+  float: right;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--yellow);
+  font-variant-numeric: tabular-nums;
+}
+/* Bulk stop actions */
+.dash-agent-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.dash-stop-all-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--red);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  min-height: 36px;
+}
+.dash-stop-all-btn:hover { background: #f8717122; }
+.dash-stop-selected-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--orange);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  min-height: 36px;
+}
+.dash-stop-selected-btn:hover { background: #fb923c22; }
+.dash-new-agent-btn {
+  padding: 6px 14px;
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  min-height: 36px;
+}
+.dash-new-agent-btn:hover {
+  background: rgba(108, 138, 255, 0.08);
+  border-color: var(--accent);
+}
+
+/* Checkbox column */
+.dash-check-th,
+.dash-check-cell {
+  width: 36px;
+  text-align: center;
+}
+.dash-check-cell input[type="checkbox"],
+.dash-check-th input[type="checkbox"] {
+  accent-color: var(--accent);
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+/* Project badge */
+.project-badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 1px 6px;
+  border-radius: 3px;
+  margin-left: 6px;
+  background: rgba(108, 138, 255, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(108, 138, 255, 0.25);
+  vertical-align: middle;
+}
+
+/* Toggle deleted agents */
+.dash-toggle-deleted {
+  display: block;
+  margin: 8px auto 0;
+  padding: 6px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.dash-toggle-deleted:hover {
+  background: var(--surface2);
+  color: var(--text);
+}
+
+@media (min-width: 768px) {
+  .dash-table thead th { padding: 12px 16px; }
+  .dash-table tbody td { padding: 12px 16px; }
+}

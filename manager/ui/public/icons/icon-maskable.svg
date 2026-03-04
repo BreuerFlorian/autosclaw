@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="fg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c8aff"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="pl" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7b9aff"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="pr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Full bleed background for maskable icon (safe zone = inner 80%) -->
+  <rect width="512" height="512" fill="#0a0c10"/>
+
+  <!-- Content scaled to 80% safe zone (centered in 51.2-460.8 range, ~102.4 to 409.6) -->
+  <g transform="translate(76.8, 76.8) scale(0.7)">
+    <!-- Top bar (hub) -->
+    <rect x="144" y="88" width="224" height="48" rx="24" fill="url(#fg)"/>
+
+    <!-- Arm -->
+    <rect x="232" y="136" width="48" height="48" rx="16" fill="url(#fg)" opacity="0.6"/>
+
+    <!-- Junction -->
+    <circle cx="256" cy="208" r="40" fill="url(#fg)"/>
+    <circle cx="256" cy="208" r="20" fill="#0a0c10"/>
+
+    <!-- Left prong -->
+    <path d="M 232 232 C 192 280, 136 336, 120 376 C 112 400, 120 416, 136 416 C 152 416, 160 400, 160 384"
+          stroke="url(#pl)" stroke-width="28" stroke-linecap="round" fill="none"/>
+
+    <!-- Center prong -->
+    <path d="M 256 248 C 256 304, 256 360, 256 392 C 256 416, 248 424, 232 424 C 216 424, 216 408, 224 392"
+          stroke="url(#fg)" stroke-width="28" stroke-linecap="round" fill="none"/>
+
+    <!-- Right prong -->
+    <path d="M 280 232 C 320 280, 376 336, 392 376 C 400 400, 392 416, 376 416 C 360 416, 352 400, 352 384"
+          stroke="url(#pr)" stroke-width="28" stroke-linecap="round" fill="none"/>
+
+    <!-- Tiny agent node indicators -->
+    <circle cx="144" cy="424" r="16" fill="#4ade80" opacity="0.8"/>
+    <circle cx="256" cy="440" r="16" fill="#22d3ee" opacity="0.8"/>
+    <circle cx="368" cy="424" r="16" fill="#4ade80" opacity="0.8"/>
+  </g>
+</svg>

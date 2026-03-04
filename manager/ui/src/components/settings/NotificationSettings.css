@@ -1,0 +1,93 @@
+.settings-card {
+  max-width: 400px;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.settings-label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.settings-label-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.settings-label-desc {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.toggle-btn {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  border: none;
+  border-radius: 12px;
+  background: var(--surface3);
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  padding: 0;
+}
+.toggle-btn.active {
+  background: var(--accent);
+}
+.toggle-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.2s;
+}
+.toggle-btn.active .toggle-knob {
+  transform: translateX(20px);
+}
+
+.settings-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  font-size: 12px;
+}
+
+.settings-status-label {
+  color: var(--text-dim);
+}
+
+.settings-status-value {
+  font-weight: 600;
+}
+.settings-status-value.granted { color: var(--green); }
+.settings-status-value.denied { color: var(--red); }
+.settings-status-value.default { color: var(--yellow); }
+
+.settings-note {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.settings-warning {
+  color: var(--orange);
+}

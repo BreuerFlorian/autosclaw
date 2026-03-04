@@ -1,0 +1,76 @@
+.project-row {
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.project-row:hover {
+  background: var(--surface2);
+}
+.project-token-cell {
+  font-size: 12px;
+}
+.project-token-masked {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--surface2);
+  color: var(--text-dim);
+}
+.project-actions-cell {
+  display: flex;
+  gap: 6px;
+}
+.project-actions-th {
+  width: 140px;
+}
+.text-dim {
+  color: var(--text-dim);
+}
+
+/* Cards (mobile) */
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.project-card:hover {
+  background: var(--surface2);
+}
+.project-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.project-card-name {
+  font-size: 14px;
+  font-weight: 600;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.project-card-token code {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--surface2);
+  color: var(--text-dim);
+}
+.project-card-purpose {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.project-card-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+}

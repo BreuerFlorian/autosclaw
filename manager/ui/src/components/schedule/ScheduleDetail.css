@@ -1,0 +1,155 @@
+.schedule-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 16px 12px;
+  animation: fadeIn 0.3s ease;
+}
+.schedule-detail-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.schedule-detail-header h2 { font-size: 16px; font-weight: 600; letter-spacing: -0.02em; }
+.schedule-title { display: flex; align-items: center; gap: 10px; }
+.schedule-title .back-btn.dash-brand {
+  display: flex;
+  align-items: center;
+  width: auto;
+  gap: 8px;
+  padding: 0 12px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.schedule-title .back-btn.dash-brand:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: rgba(108, 138, 255, 0.08);
+}
+.schedule-title .dash-brand-logo {
+  width: 22px;
+  height: 22px;
+}
+.schedule-detail-actions { display: flex; gap: 8px; }
+.schedule-action-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  background: transparent;
+  min-height: 44px;
+}
+.schedule-action-btn.pause { border: 1px solid var(--yellow); color: var(--yellow); }
+.schedule-action-btn.pause:hover { background: #facc1522; }
+.schedule-action-btn.resume { border: 1px solid var(--green); color: var(--green); }
+.schedule-action-btn.resume:hover { background: #4ade8022; }
+.schedule-action-btn.delete { border: 1px solid var(--red); color: var(--red); }
+.schedule-action-btn.delete:hover { background: #f8717122; }
+.schedule-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: none;
+}
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label {
+  font-size: 11px; font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+.form-group input, .form-group textarea, .form-group select {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  min-height: 44px;
+}
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%237c829a' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+  cursor: pointer;
+}
+.form-group select option {
+  background: var(--surface2);
+  color: var(--text);
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--accent); }
+.form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-dim); }
+.form-group textarea { resize: vertical; min-height: 80px; }
+.form-hint { font-size: 12px; color: var(--text-dim); }
+.schedule-form-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  margin-top: 8px;
+}
+.schedule-meta { font-size: 12px; color: var(--text-dim); }
+.schedule-save-btn {
+  padding: 10px 28px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  text-align: center;
+  min-height: 44px;
+}
+.schedule-save-btn:hover { opacity: 0.85; }
+.schedule-form .checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+.schedule-form .checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .schedule-detail { padding: 24px; }
+  .schedule-detail-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .schedule-form { max-width: 560px; }
+  .form-group input, .form-group textarea { font-size: 14px; }
+  .schedule-form-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

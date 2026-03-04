@@ -1,0 +1,102 @@
+.agent-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  background: var(--surface);
+}
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.back-btn:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: rgba(108, 138, 255, 0.08);
+}
+.back-btn.dash-brand {
+  width: auto;
+  gap: 8px;
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+.back-btn.dash-brand .dash-brand-logo {
+  width: 22px;
+  height: 22px;
+}
+.agent-title { display: flex; align-items: center; gap: 10px; }
+.agent-header h2 { font-size: 15px; font-weight: 600; letter-spacing: -0.02em; }
+.status-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--text-dim);
+}
+.status-dot.running { background: var(--green); box-shadow: 0 0 6px rgba(74, 222, 128, 0.4); }
+.status-dot.starting { background: var(--yellow); animation: pulse 1.5s ease-in-out infinite; }
+.status-dot.stopping { background: var(--orange); animation: pulse 1s ease-in-out infinite; }
+.status-dot.stopped { background: var(--red); }
+.status-dot.waiting { background: var(--magenta); animation: pulse 1.2s ease-in-out infinite; }
+.status-label { font-size: 13px; color: var(--text-dim); }
+.history-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(108, 138, 255, 0.12);
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+.stop-btn {
+  padding: 8px 16px;
+  border: 1px solid var(--red);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  min-height: 44px;
+}
+.stop-btn:hover { background: #f8717122; }
+.stop-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.stop-btn:disabled:hover { background: transparent; }
+@media (min-width: 768px) {
+  .agent-header { padding: 16px 24px; }
+  .agent-header h2 { font-size: 16px; }
+}
+@media (max-width: 767px) {
+  .agent-header { padding: 10px 12px; gap: 8px; }
+  .agent-header h2 {
+    font-size: 13px;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .agent-title { gap: 6px; }
+  .status-label { font-size: 11px; }
+  .history-badge { font-size: 10px; padding: 1px 6px; }
+  .back-btn.dash-brand {
+    padding: 0 8px;
+    font-size: 12px;
+    gap: 6px;
+    height: 40px;
+  }
+  .back-btn.dash-brand .dash-brand-logo { width: 18px; height: 18px; }
+  .stop-btn { padding: 6px 12px; font-size: 11px; min-height: 40px; }
+}

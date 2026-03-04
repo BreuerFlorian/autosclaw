@@ -1,0 +1,32 @@
+{
+  "name": "autosclaw-manager",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/main.ts",
+    "ui:dev": "cd ui && npm run dev",
+    "ui:build": "cd ui && npm install && npm run build"
+  },
+  "dependencies": {
+    "@types/web-push": "^3.6.4",
+    "@types/ws": "^8.18.1",
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^12.6.2",
+    "cron-parser": "^5.5.0",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "tsx": "^4.19.0",
+    "web-push": "^3.6.7",
+    "ws": "^8.19.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}

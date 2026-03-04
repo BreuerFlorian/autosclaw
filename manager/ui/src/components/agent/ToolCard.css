@@ -1,0 +1,145 @@
+.tool-card {
+  border-left: 3px solid var(--magenta);
+  border-radius: 0 6px 6px 0;
+  background: var(--surface);
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+.tool-card:hover { background: var(--surface2); }
+.tool-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  user-select: none;
+  min-height: 44px;
+}
+.tool-badge {
+  display: inline-block;
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 1px 7px;
+  border-radius: 4px;
+  background: #c084fc18;
+  color: var(--magenta);
+  font-family: var(--font-sans);
+  flex-shrink: 0;
+}
+.tool-name {
+  font-family: var(--font-mono);
+  font-size: 14px; font-weight: 600;
+  color: var(--text);
+  flex-shrink: 0;
+}
+.tool-summary { display: none; }
+.tool-card .block-time {
+  font-size: 10px;
+  color: var(--text-dim);
+  opacity: 0.5;
+  font-family: var(--font-sans);
+  flex-shrink: 0;
+}
+.tool-chevron {
+  font-size: 10px;
+  color: var(--text-dim);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.tool-card.open .tool-chevron { transform: rotate(90deg); }
+.tool-detail { display: none; }
+.tool-card.open .tool-detail { display: block; }
+.tool-detail pre {
+  margin: 0;
+  padding: 8px 12px;
+  font-family: var(--font-mono);
+  font-size: 12px; line-height: 1.4;
+  color: var(--text-dim);
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-top: 1px solid var(--border);
+}
+/* Tool-specific views */
+.tool-cmd-block { border-top: 1px solid var(--border); padding: 8px 12px; }
+.tool-cmd-block pre {
+  margin: 0; padding: 6px 10px;
+  background: var(--bg);
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 12px; line-height: 1.4;
+  color: var(--green);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.tool-cmd-desc { margin-top: 4px; font-size: 11px; color: var(--text-dim); font-style: italic; }
+.tool-file-path {
+  padding: 6px 12px;
+  border-top: 1px solid var(--border);
+  font-size: 12px; font-weight: 600;
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+.tool-file-content {
+  margin: 0; padding: 8px 12px;
+  font-family: var(--font-mono);
+  font-size: 12px; line-height: 1.4;
+  color: var(--text-dim);
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-top: 1px solid var(--border);
+  max-height: 300px;
+  overflow-y: auto;
+}
+.tool-diff { border-top: 1px solid var(--border); padding: 4px 0; }
+.diff-label {
+  padding: 2px 12px;
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-family: var(--font-sans);
+}
+.diff-label.diff-remove { color: var(--red); }
+.diff-label.diff-add { color: var(--green); }
+.diff-content {
+  margin: 0 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 12px; line-height: 1.4;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.diff-old { background: #f871710a; border-left: 2px solid var(--red); color: var(--text-dim); }
+.diff-new { background: #4ade800a; border-left: 2px solid var(--green); color: var(--text); }
+.todo-list { border-top: 1px solid var(--border); padding: 8px 12px; display: flex; flex-direction: column; gap: 4px; }
+.todo-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 4px 8px; border-radius: 4px;
+  font-size: 13px; font-family: var(--font-sans);
+}
+.todo-check { flex-shrink: 0; font-size: 14px; width: 20px; text-align: center; }
+.todo-text { min-width: 0; }
+.todo-completed .todo-text { text-decoration: line-through; color: var(--text-dim); }
+.todo-in_progress { background: #22d3ee0a; }
+.todo-in_progress .todo-text { color: var(--cyan); }
+.todo-pending .todo-text { color: var(--text); }
+@media (min-width: 768px) {
+  .tool-name { font-size: 13px; }
+  .tool-summary { display: block; }
+  .tool-header { padding: 6px 12px; }
+}
+@media (max-width: 767px) {
+  .tool-header { padding: 6px 10px; gap: 6px; min-height: 40px; }
+  .tool-badge { font-size: 9px; padding: 1px 5px; }
+  .tool-name { font-size: 12px; }
+  .tool-card .block-time { font-size: 9px; }
+  .tool-detail pre { padding: 6px 10px; font-size: 11px; }
+  .tool-cmd-block { padding: 6px 10px; }
+  .tool-cmd-block pre { font-size: 11px; padding: 4px 8px; }
+  .tool-file-content { max-height: 200px; font-size: 11px; }
+  .diff-content { font-size: 11px; max-height: 150px; }
+}

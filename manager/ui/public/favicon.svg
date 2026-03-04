@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="fg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c8aff"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="pl" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7b9aff"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="pr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark background circle -->
+  <circle cx="32" cy="32" r="30" fill="#0a0c10"/>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="url(#fg)" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Top bar (hub) -->
+  <rect x="18" y="11" width="28" height="6" rx="3" fill="url(#fg)"/>
+
+  <!-- Arm -->
+  <rect x="29" y="17" width="6" height="6" rx="2" fill="url(#fg)" opacity="0.6"/>
+
+  <!-- Junction -->
+  <circle cx="32" cy="26" r="5" fill="url(#fg)"/>
+  <circle cx="32" cy="26" r="2.5" fill="#0a0c10"/>
+
+  <!-- Left prong -->
+  <path d="M 29 29 C 24 35, 17 42, 15 47 C 14 50, 15 52, 17 52 C 19 52, 20 50, 20 48"
+        stroke="url(#pl)" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Center prong -->
+  <path d="M 32 31 C 32 38, 32 45, 32 49 C 32 52, 31 53, 29 53 C 27 53, 27 51, 28 49"
+        stroke="url(#fg)" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Right prong -->
+  <path d="M 35 29 C 40 35, 47 42, 49 47 C 50 50, 49 52, 47 52 C 45 52, 44 50, 44 48"
+        stroke="url(#pr)" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Tiny agent node indicators -->
+  <circle cx="18" cy="53" r="2" fill="#4ade80" opacity="0.8"/>
+  <circle cx="32" cy="55" r="2" fill="#22d3ee" opacity="0.8"/>
+  <circle cx="46" cy="53" r="2" fill="#4ade80" opacity="0.8"/>
+</svg>

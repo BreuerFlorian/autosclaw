@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.tsbuildinfo
+
+.env
+.env.*
+!.env.template
+
+*.log
+
+.DS_Store
+
+manager/data/
+manager/src/public/

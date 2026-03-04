@@ -1,0 +1,42 @@
+.dash-schedule-row { cursor: pointer; transition: background 0.15s ease; }
+.dash-schedule-row:hover { background: var(--surface2); }
+.dash-schedule-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.dash-schedule-badge.active { background: rgba(74, 222, 128, 0.12); color: var(--green); }
+.dash-schedule-badge.paused { background: rgba(250, 204, 21, 0.12); color: var(--yellow); }
+.dash-table code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--surface2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--text-dim);
+}
+.dash-actions-th { text-align: right; }
+.dash-actions-cell { text-align: right; white-space: nowrap; }
+.dash-action-btn {
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  background: transparent;
+  margin-left: 4px;
+  min-height: 28px;
+}
+.dash-action-btn.pause { border: 1px solid var(--yellow); color: var(--yellow); }
+.dash-action-btn.pause:hover { background: #facc1522; }
+.dash-action-btn.resume { border: 1px solid var(--green); color: var(--green); }
+.dash-action-btn.resume:hover { background: #4ade8022; }
+.dash-action-btn.edit { border: 1px solid var(--yellow); color: var(--yellow); }
+.dash-action-btn.edit:hover { background: #facc1522; }
+.dash-action-btn.delete { border: 1px solid var(--red); color: var(--red); }
+.dash-action-btn.delete:hover { background: #f8717122; }

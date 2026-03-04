@@ -1,0 +1,6 @@
+dist
+.git
+*.md
+!CLAUDE.md
+.env
+.env.*

@@ -1,0 +1,145 @@
+/* Right-align numeric columns */
+.usage-num-col {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Totals footer row */
+.usage-totals-row td {
+  padding: 12px 12px;
+  border-top: 1px solid var(--border);
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Pagination */
+.usage-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 0;
+}
+.usage-page-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  min-height: 32px;
+}
+.usage-page-btn:hover {
+  background: rgba(108, 138, 255, 0.08);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.usage-page-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.usage-page-btn:disabled:hover {
+  background: transparent;
+  color: var(--text-dim);
+  border-color: var(--border);
+}
+.usage-page-info {
+  font-size: 12px;
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Clickable agent name */
+.usage-agent-name {
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.usage-agent-name:hover {
+  color: var(--accent);
+}
+
+@media (min-width: 768px) {
+  .usage-totals-row td {
+    padding: 12px 16px;
+  }
+}
+
+/* ── Usage Cards (mobile) ── */
+.usage-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.usage-card:active {
+  background: var(--surface2);
+  border-color: var(--surface3);
+}
+
+.usage-card-deleted {
+  opacity: 0.55;
+}
+
+.usage-card-total {
+  cursor: default;
+  border-style: dashed;
+}
+
+.usage-card-total:active {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.usage-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.usage-card-name {
+  font-size: 14px;
+  font-weight: 600;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.usage-card-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.usage-card-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.usage-card-stat-label {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+
+.usage-card-stat-value {
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.usage-card-stat-value.cost {
+  color: var(--yellow);
+}

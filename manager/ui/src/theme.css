@@ -1,0 +1,25 @@
+:root {
+  --bg:       #0a0c10;
+  --surface:  #12151e;
+  --surface2: #1a1e2e;
+  --surface3: #222840;
+  --border:   #2a2f45;
+  --text:     #e4e7f0;
+  --text-dim: #7c829a;
+  --accent:   #6c8aff;
+  --accent2:  #5570d4;
+  --green:    #4ade80;
+  --yellow:   #facc15;
+  --cyan:     #22d3ee;
+  --magenta:  #c084fc;
+  --red:      #f87171;
+  --orange:   #fb923c;
+  --blue:     #60a5fa;
+  --radius:   10px;
+  --radius-lg: 14px;
+  --mobile-header-h: 52px;
+  --sidebar-w: 280px;
+  --bottom-nav-h: 56px;
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
